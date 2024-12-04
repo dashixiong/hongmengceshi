@@ -8,7 +8,12 @@
 </head>
 
 <script>
-  alert(window.navigator.userAgent)
+  var isHuaWeiBrowser = window.navigator.userAgent.toLowerCase().includes('huawei')
+  var isHarmony = window.navigator.userAgent.toLowerCase().includes('harmony')
+  alert(`isHuaWeiBrowser${isHuaWeiBrowser}isHarmony${isHarmony}`)
+  if (!isHuaWeiBrowser ||!isHarmony) {
+    alert("鸿蒙NEXT版必须在鸿蒙NEXT手机上用华为浏览器访问此页面安装,请使用华为浏览器访问此页面");
+  }
 </script>
 
 </html>
